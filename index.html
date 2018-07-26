@@ -1,0 +1,62 @@
+<html ng-app="app">
+
+
+<script src="node_modules/angular/angular.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="app.js"></script>
+<script src="appp.js"></script>
+<style>
+    .div1 {
+        background-color: lightblue;
+        margin-top: 5cm;
+        opacity: 1;
+    }
+
+</style>
+
+{{3-9}}
+
+
+<div class="container" >
+    <div class="div1">
+        <h1>product
+        </h1>
+        <div ng-controller="ctrl"  >
+            <form  ng-submit="createUser(user)">
+                <div class="table-responsive">
+                    <table class="table" >
+                        <tr>
+                            <td> Emp ID:</td> <td> <input type="text" ng-model="user.assetid"/> </td>
+                            <td>Emp Name:</td> <td><input type="text" ng-model="user.empName"/> </td>
+                        </tr>
+                        <tr >
+                            <td><input type="submit" value="create"></td>
+                        </tr>
+
+
+                    </table>
+                </div>
+            </form>
+        </div>
+
+        <div ng-controller="customersCtrl" >
+            <table>
+                <tbody>
+                <tr ng-repeat="x in users"><td>{{x.assetid}}</td><td>{{x.empName}}</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div ng-controller = "myCtrl">
+            <input type = "file" file-model = "myFile"/>
+            <button ng-click = "uploadFile()">upload me</button>
+        </div>
+
+     </div>
+
+
+</div>
+</html>
